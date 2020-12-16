@@ -1,3 +1,9 @@
+# TensorFlow
+Created by the Google Brain team, TensorFlow is a free and open-source software library for numerical computation and large-scale machine learning. TensorFlow bundles together a slew of machine learning and deep learning (a.k.a neural networking) models and algorithms and makes them useful by way of a common metaphor. 
+
+## Tensor
+In mathematics, a tensor is an algebraic object that describes a relationship between sets of algebraic objects related to a vector space. Objects that tensors may map between include vectors and scalars, and even other tensors. 
+
 # OpenCV
 image and video analysis, like facial recognition and detection, license plate reading, photo editing, advanced robotic vision, and a whole lot more using Python.
 
