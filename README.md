@@ -16,3 +16,8 @@ $H(x) = Wx + b$
 
 $cost(W, b) = \frac{1}{m}\sum_{i=1}^{m}(H(x^{(i)})-y^{(i))})^{2}$
 
+# Gradient Descent Algorithm
+* Minimize ccost function
+* Gradient descent is used many minimization problems
+* For a give cost function, cost(W, b), it will find W, b to minisize cost
+* It can be applied to more general function: cost(w1, w2, ...)
