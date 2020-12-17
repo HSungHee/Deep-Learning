@@ -11,4 +11,4 @@ image and video analysis, like facial recognition and detection, license plate r
 https://bblib.net/entry/%EC%95%84%EB%82%98%EC%BD%98%EB%8B%A4-python-%EB%B2%84%EC%A0%84-%EB%B3%80%EA%B2%BD-%ED%95%98%EB%8A%94-%EB%B2%95
 
 # Hypothesis and Cost
-![수식](http://latex.codecogs.com/gif.latex?cost(W, b) = \frac{1}{m}\sum_{i=1}^{m}(H(x^{(i)})-y^{(i))})^{2})
+$$ cost(W, b) = \frac{1}{m}\sum_{i=1}^{m}(H(x^{(i)})-y^{(i))})^{2} $$
