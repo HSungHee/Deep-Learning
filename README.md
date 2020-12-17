@@ -35,3 +35,7 @@ When you make a cost function, it has to be convex function.
 * Gradient descent is used many minimization problems
 * For a give cost function, cost(W, b), it will find W, b to minisize cost
 * It can be applied to more general function: cost(w1, w2, ...)
+
+## 03 Logistic Classification
+### Logistic Function (Sigmoid Function)
+curved in two directions, like the letter "S", or the Greek c(sigma). The result value is between 0 and 1. 
