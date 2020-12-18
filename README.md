@@ -36,6 +36,28 @@ When you make a cost function, it has to be convex function.
 * For a give cost function, cost(W, b), it will find W, b to minisize cost
 * It can be applied to more general function: cost(w1, w2, ...)
 
-## 03 Logistic Classification
+## 05 Logistic Classification
 ### Logistic Function (Sigmoid Function)
 curved in two directions, like the letter "S", or the Greek c(sigma). The result value is between 0 and 1. 
+
+## 06 Softmax Classification
+### One Hot-Encoding
+One hot encoding is a process by which categorical variables are converted into a form that could be provided to ML algorithms to do a better job in prediction. 
+In the "colour" variable example, there are 3 categories and therefore 3 binary variables are needed. A "1" value is placed in the binary variable for the colour and "0" values for the other colours. For example:
+|red|green|blue|
+|---|---|---|
+|1|0|0|
+|0|1|0|
+|0|0|1|
+
+
+### Categorical Data
+Categorical data are variables that contain label values rather thatn numeric values. Categorical variables are often called nominal.
+Some exapmes include:
+* A "pet" variables with the values: "dog" and "cat".
+* A "colour" variables with the values: "red", "green" and "blue".
+* A "place" variables with the values: "first", "second", and "third".
+
+Each value represents a different category. Some categories may have a natural relationship to each other, such as a natural ordering. The "place" variable above does have a natural ordering of values. This type of categorical variable is called an ordinal variable. 
+
+
