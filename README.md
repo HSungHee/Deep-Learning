@@ -62,4 +62,20 @@ Some exapmes include:
 
 Each value represents a different category. Some categories may have a natural relationship to each other, such as a natural ordering. The "place" variable above does have a natural ordering of values. This type of categorical variable is called an ordinal variable. 
 
+## 07 Application & Tips
+### Learning Rate
+Large learning rate cause overshooting problem. On the other hand, small learning rate needs many iterations until convergence and trapping in local minima.
+
+### Data Preprocessing
+
+### Overfitting
+
+Solutions for overfitting:
+* More training data
+* Reduce the number of features
+* Regularization
+
+### Online Learning
+
+
 
