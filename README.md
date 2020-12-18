@@ -41,6 +41,8 @@ When you make a cost function, it has to be convex function.
 curved in two directions, like the letter "S", or the Greek c(sigma). The result value is between 0 and 1. 
 
 ## 06 Softmax Classification
+The Softmax function takes as input a vector z of K real numbers, and normalized it into a probability distribution consisting of K probabilities proportional to the exponentials of the input numbers. 
+
 ### One Hot-Encoding
 One hot encoding is a process by which categorical variables are converted into a form that could be provided to ML algorithms to do a better job in prediction. 
 In the "colour" variable example, there are 3 categories and therefore 3 binary variables are needed. A "1" value is placed in the binary variable for the colour and "0" values for the other colours. For example:
