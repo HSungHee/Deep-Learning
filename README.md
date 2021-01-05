@@ -84,3 +84,33 @@ In the neural network terminology:
   
 Example: if you have 1000 training examples, and your batch sisze is 500, then it will take 2 iterations to complete 1 epoch. 
 
+## 09 TensorBoard
+### 5 Steps of Using TensorBoard
+1. From TF graph, decide which tensors you want to log
+```
+w2_hist = tf.summary.histogram("weight2", W2)
+cost_summ = tf.summary.scalar("cost", cost)
+```
+
+2. Merge all summaries
+```
+summary = tf.summary.merge_all()
+```
+
+3. Create Writer and add graph
+```
+# Create summary writer
+writer = tf.summary.FileWriter('./logs')
+writer.add_graph(sess.graph)
+```
+
+4. Run summary merge and add_summary
+```
+s, _ = sess.run([summary, optimizer], feed_dict=feed_dict)
+writer.add_summary(s, global_step=global_step)
+```
+
+5. Launch TensorBoard
+```
+tensorboard --logdir=./logs
+```
