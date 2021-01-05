@@ -116,4 +116,6 @@ tensorboard --logdir=./logs
 ```
 ```
 # remote server, you can navigate to http://127.0.0.1:7007
-ssh -L local_port:127.0.0.1:remote_port username@server.com
+local> $ ssh -L local_port:127.0.0.1:remote_port username@server.com
+server> $ tensorboard -logdir=./logs/xor_logs
+```
