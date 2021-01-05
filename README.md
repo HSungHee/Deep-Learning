@@ -100,7 +100,7 @@ summary = tf.summary.merge_all()
 3. Create Writer and add graph
 ```
 # Create summary writer
-writer = tf.summary.FileWriter('./logs')
+writer = tf.summary.FileWriter('./logs')  # set the file location
 writer.add_graph(sess.graph)
 ```
 
