@@ -157,5 +157,8 @@ L1 = tf.nn.dropout(_L1, dropout_rate)
 # and when you train the data, use dropout but for the evaluation, you need to use all data from datasets. 
 ```
 
-
+### Xavier Initialization
+```
+W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.initilizer())
+```
 
