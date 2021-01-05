@@ -84,7 +84,7 @@ In the neural network terminology:
   
 Example: if you have 1000 training examples, and your batch sisze is 500, then it will take 2 iterations to complete 1 epoch. 
 
-## 09 TensorBoard
+## 09 How to Solve XOR in Deep Learning
 ### 5 Steps of Using TensorBoard
 1. From TF graph, decide which tensors you want to log
 ```
@@ -119,3 +119,43 @@ tensorboard --logdir=./logs
 local> $ ssh -L local_port:127.0.0.1:remote_port username@server.com
 server> $ tensorboard -logdir=./logs/xor_logs
 ```
+
+## 10 ReLU (Rectified Linear Unit)
+
+### Geoffrey Hinton's Summary of Finidings up to Today
+* Our labeled datasets were thousands of times too small.
+* Our computers were milions of times too slow.
+* We initialized the weights in a stupid way.
+* We used the wrong type of non-linearity.
+
+### Backpropagation (Chain Rule)
+
+### Vanishing Gradient Problem 
+We used the wrong type of non-linearity. Using sigmoid function make values converge into zero.
+
+### Sigmoid
+```
+tf.sigmoid(tf.matmul(X, W) + b))
+```
+
+### ReLU (Rectified Linear Unit)
+```
+tf.nn.relu(tf.matmul(X, W) + b))
+```
+
+### Leaky ReLU
+
+### ELU
+
+### Regularization: Dropout
+randomly set some neurons to zero in the forward pass. It forces the network to have a redundant representation.
+```
+dropout_rate = tf.placeholder("float")
+_L1 = tf.nn.relu(tf.add(tf.matmul(X, W), b))
+L1 = tf.nn.dropout(_L1, dropout_rate)
+
+# and when you train the data, use dropout but for the evaluation, you need to use all data from datasets. 
+```
+
+
+
