@@ -114,3 +114,6 @@ writer.add_summary(s, global_step=global_step)
 ```
 tensorboard --logdir=./logs
 ```
+```
+# remote server, you can navigate to http://127.0.0.1:7007
+ssh -L local_port:127.0.0.1:remote_port username@server.com
