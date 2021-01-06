@@ -170,12 +170,10 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
 * Output size : (N - F) / stride + 1
 * In Practice: Common to zero pad the border, in general, common to see CONV layers with stride 1, filters of size F * F, and zero-padding with (F - 1) / 2. (will preserve size spatially)
 
-         e.g. 
+     e.g. F = 3 => zero pad with 1
 
-         F = 3 => zero pad with 1
+     F = 5 => zero pad with 2
 
-         F = 5 => zero pad with 2
-
-         F = 7 => zero pad with 3
+     F = 7 => zero pad with 3
 
 
