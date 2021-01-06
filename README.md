@@ -1,8 +1,3 @@
-<script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
-config=TeX-MML-AM_CHTML"
-</script>
-
 # Deep Learning
 Deep Learning is a subfiled of machine learning concerned with algorithms inspired by the structure and fuction of the brain called artifical neural networks. Learning an be supervised, semi-supervised or unsupervised. 
 
@@ -199,6 +194,20 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
 We can process a sequence of vectors x by applying a recurrence formula at every time step:
 
 $$ h_t = f_w(h_{t-1}, x_t) $$
+
+Notice: the same function and the same set of parameters are used at every time step.
+
+Applications:
+* Language Modeling
+* Speech Recognition
+* Machine Translation
+* Conversation Modeling/Question Answering
+* Image/Video Captioning
+* Image/Music/Dance Generation
+
+Several advanced models:
+* Long Short Term Memory (LSTM)
+* GRU by Cho et al. 2014
 
 ### Sequence Data
 * We don't understand one word only
