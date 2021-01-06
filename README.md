@@ -185,4 +185,11 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
 ### Case Study: ResNet
 
 
+## RNN
+
+### Sequence Data
+* We don't understand one word only
+* We understand based on the previous words + this word (time series)
+* NN/CNN cannot do this
+
 
