@@ -1,3 +1,8 @@
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
+config=TeX-MML-AM_CHTML"
+</script>
+
 # Deep Learning
 Deep Learning is a subfiled of machine learning concerned with algorithms inspired by the structure and fuction of the brain called artifical neural networks. Learning an be supervised, semi-supervised or unsupervised. 
 
@@ -193,8 +198,7 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
 
 We can process a sequence of vectors x by applying a recurrence formula at every time step:
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
-
+$$ h_t = f_w(h_{t-1}, x_t) $$
 
 ### Sequence Data
 * We don't understand one word only
