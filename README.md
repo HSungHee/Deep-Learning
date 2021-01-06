@@ -1,6 +1,14 @@
 # Deep Learning
 Deep Learning is a subfiled of machine learning concerned with algorithms inspired by the structure and fuction of the brain called artifical neural networks. Learning an be supervised, semi-supervised or unsupervised. 
 
+# Deep Network
+* Take a long time for training
+  - Many forward/backward propagation and weight updates
+  - Many metrics multiplications
+  
+* Very quick for testing and use in practice
+  - One simple forward propagation
+
 # TensorFlow
 Created by the Google Brain team, TensorFlow is a free and open-source software library for numerical computation and large-scale machine learning. TensorFlow bundles together a slew of machine learning and deep learning (a.k.a neural networking) models and algorithms and makes them useful by way of a common metaphor. 
 
@@ -213,5 +221,17 @@ Several advanced models:
 * We don't understand one word only
 * We understand based on the previous words + this word (time series)
 * NN/CNN cannot do this
+
+### GPU
+A graphics processing unit(GPU), also occasionally called visual processing unit (VPU), is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display. 
+
+```
+# Ubuntu/Linux 64-bit, GPU enabled, Python 2.7
+# Requires CUDA toolkit 7.5 and CuDNN v4. For other versions, see "Install from sources" below
+$ export TF_BINARY_URL=http://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.9.0rc0-cp27-none-linux_x86_64.whl
+
+# Python 2
+$ sudo pip install --upgrade $TF_BINARY_URL
+
 
 
