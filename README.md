@@ -20,7 +20,7 @@ Youtube Link : https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOj
 
 Slide Link : https://drive.google.com/drive/folders/0B41Zbb4c8HVyMHlSQlVFWWphNXc
 
-## 02 Linear Regression
+## 02. Linear Regression
 ### Hypothesis and Cost
 $H(x) = Wx + b$
 
@@ -120,7 +120,7 @@ local> $ ssh -L local_port:127.0.0.1:remote_port username@server.com
 server> $ tensorboard -logdir=./logs/xor_logs
 ```
 
-## 10 ReLU (Rectified Linear Unit)
+## 10. ReLU (Rectified Linear Unit)
 
 ### Geoffrey Hinton's Summary of Finidings up to Today
 * Our labeled datasets were thousands of times too small.
@@ -162,7 +162,7 @@ L1 = tf.nn.dropout(_L1, dropout_rate)
 W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.initilizer())
 ```
 
-## 11 CNN (Convolutional Neural Network)
+## 11. CNN (Convolutional Neural Network)
 
 * Stride
 * Filter(F)
@@ -175,5 +175,14 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
      F = 5 => zero pad with 2
 
      F = 7 => zero pad with 3
+
+### Case Study: LeNet-5
+
+### Case Study: AlexNet
+
+### Case Study: GoogLeNet
+
+### Case Study: ResNet
+
 
 
