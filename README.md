@@ -222,6 +222,8 @@ Several advanced models:
 * We understand based on the previous words + this word (time series)
 * NN/CNN cannot do this
 
+## 13. Tensorflow on AWS
+
 ### GPU
 A graphics processing unit(GPU), also occasionally called visual processing unit (VPU), is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display. 
 
@@ -232,6 +234,14 @@ $ export TF_BINARY_URL=http://storage.googleapis.com/tensorflow/linux/gpu/tensor
 
 # Python 2
 $ sudo pip install --upgrade $TF_BINARY_URL
+```
+
+### Add Path
+```
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/urs/local/cuda/lib64:$LD_LIBRARY_PATH
+```
+
 
 
 
