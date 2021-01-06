@@ -85,7 +85,8 @@ In the neural network terminology:
 Example: if you have 1000 training examples, and your batch sisze is 500, then it will take 2 iterations to complete 1 epoch. 
 
 ## 09 How to Solve XOR in Deep Learning
-### 5 Steps of Using TensorBoard
+### 5 Steps of Using Tensor
+
 1. From TF graph, decide which tensors you want to log
 ```
 w2_hist = tf.summary.histogram("weight2", W2)
@@ -121,6 +122,9 @@ server> $ tensorboard -logdir=./logs/xor_logs
 ```
 
 ## 10. ReLU (Rectified Linear Unit)
+
+### TensorBoard
+https://webnautes.tistory.com/1288
 
 ### Geoffrey Hinton's Summary of Finidings up to Today
 * Our labeled datasets were thousands of times too small.
@@ -185,7 +189,12 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
 ### Case Study: ResNet
 
 
-## RNN
+## RNN (Recurrent Neural Network)
+
+We can process a sequence of vectors x by applying a recurrence formula at every time step:
+
+![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
+
 
 ### Sequence Data
 * We don't understand one word only
