@@ -75,6 +75,13 @@ Each value represents a different category. Some categories may have a natural r
 Large learning rate cause overshooting problem. On the other hand, small learning rate needs many iterations until convergence and trapping in local minima.
 
 ### Data Preprocessing
+Data preprocessing is an important step in the data mining process. If there is much irrelevant and redundant information present or noisy and unreliable data, then knowledge discovery during the training phase is more difficult. Data preparation and filtering steps can take considerable amount of processing time. Data preprocessing includes cleaning, Instance selection, normalization, transformation, feature extraction, and selection, etc. The product of data preprocessing is the final training set. 
+
+Tasks of data preprocessing:
+* Data cleansing
+* Data editing
+* Data reduction
+* Data wrangling
 
 ### Overfitting
 
@@ -141,26 +148,31 @@ https://webnautes.tistory.com/1288
 * We used the wrong type of non-linearity.
 
 ### Backpropagation (Chain Rule)
+Backpropagation, short for "backward propagation of errors", is an algorithm for supervised learning of artificial neural networks using gradient descent. Given an artificial neural network and an error funtion, the method calculates the gradient of the rror function with respect to the neural network's weights. 
 
 ### Vanishing Gradient Problem 
-We used the wrong type of non-linearity. Using sigmoid function make values converge into zero.
+We used the wrong type of non-linearity. Using sigmoid function make values converge into zero. In machine learning, the vanishing gradient problem is encountered when training artificial neural networks with gradient-based learning methods and backpropagation. In such methods, each of the neural network's weights receives an update proportional to the partial derivative of the rror function with respect to the current weight in each iteration of training. The problem is that in some cases, the gradient will be vanishingly small, effectively preventing the weight from changing its value. In the worst case, this may completely stop the neural network from further training.
 
 ### Sigmoid
+A sigmoid function is a mathematical function having a characteristic "S"-shaped curve or sigmoid curve. A common example of a sigmoid function is the logistic function shown in the first figure and defined by the formula. 
+
+$$ S(x) = 1/(1 + e^{-x}) = e^x/(e^x + 1) $$
+
 ```
 tf.sigmoid(tf.matmul(X, W) + b))
 ```
 
 ### ReLU (Rectified Linear Unit)
+The rectified linear activation function or ReLU for short is a piecewise linear function that will output the input directly if it is positive, otherwise, it will output zero. It has become the default activation function for many types of neural netowrks because a model that uses it is easier to train and often achieves beter performance. 
 ```
 tf.nn.relu(tf.matmul(X, W) + b))
 ```
 
 ### Leaky ReLU
-
-### ELU
+The Leaky ReLU (LReLU or LReL) modifies the function to allow small negative values when the input is less than zero.
 
 ### Regularization: Dropout
-randomly set some neurons to zero in the forward pass. It forces the network to have a redundant representation.
+Randomly set some neurons to zero in the forward pass. It forces the network to have a redundant representation.
 ```
 dropout_rate = tf.placeholder("float")
 _L1 = tf.nn.relu(tf.add(tf.matmul(X, W), b))
@@ -170,11 +182,13 @@ L1 = tf.nn.dropout(_L1, dropout_rate)
 ```
 
 ### Xavier Initialization
+Xavier initialization, originally proposed by Xavier Glorot and Yoshua Bengio in "Understanding the difficulty of training deep feedforward neural networks", is the weights initialization technique that tries to make the variance of the outputs of a layer to be equal to the variance of its inputs.
 ```
 W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.initilizer())
 ```
 
 ## 11. CNN (Convolutional Neural Network)
+In deep learning, a convolutional neural netowrk (CNN, or ConvNet) is a class of deep neural networks, most commonly applied to analyzing visual imagery. CNNs are regularized versions of multilayer perceptrons. Multilayer perceptrons usually mean fullly connected networks, that is, each neuron in one layer is connected to all neurons in the next layer. The "fully-connectedness" of theses networks makes them prone to overfiitting data. Typical ways of regularization include adding some form of magnitude measurement of weights to the loss function. CNNs take a different approach towards regularization: they take advantage of the hierarchical pattern in data and assemble more complex patterns using smaller and simpler patterns. Therefore, on the scale of connectedness and complexity, CNNs are on the lower extreme.
 
 * Stride
 * Filter(F)
@@ -189,15 +203,18 @@ W = tf.get_variable("W", shape=[784, 256], initializer=tf.contrib.laters.xavier.
      F = 7 => zero pad with 3
 
 ### Case Study: LeNet-5
+LeNet is a convolutional neural network structure proposed by Yann LeCun et al. in 1989. In general, LeNet refers to lenet-5 and is a simple convolutional neural network. Convolutional neural networks are a kind of feed-forward neural network whose artificial neurons can respond to a part of the surrounding cells in the coverage range and perform well in large-scale image processing.
 
 ### Case Study: AlexNet
+AlexNet is the name of a convolutional neural network (CNN), designed by Alex Krizhevsky in collaboration with Ilya Sutskever and Geoffrey Hinton, who was Krizhevsky's Ph.D. advisor.
 
-### Case Study: GoogLeNet
+AlexNet competed in the ImageNet Large Scale Visual Recognition Challenge on September 30, 2012. The network achieved a top-5 error of 15.3%, more than 10.8 percentage points lower than that of the runner up. The original paper's primary result was that the depth of the model was essential for its high performance, which was computationally expensive, but made feasible due to the utilization of graphics processing units (GPUs) during training.
 
 ### Case Study: ResNet
-
+A residual neural network (ResNet) is an artificial neural network (ANN) of a kind that builds on constructs known from pyramidal cells in the cerebral cortex. Residual neural networks do this by utilizing skip connections, or shortcuts to jump over some layers. Typical ResNet models are implemented with double- or triple- layer skips that contain nonlinearities (ReLU) and batch normalization in between. An additional weight matrix may be used to learn the skip weights; these models are known as HighwayNets. Models with several parallel skips are referred to as DenseNets. In the context of residual neural networks, a non-residual network may be described as a plain network.
 
 ## RNN (Recurrent Neural Network)
+A recurrent neural netowrk (RNN) is a class of artificial neural networks where connections between nodes from a directed graph along a temporal sequence. This allows it to exhibit temporal dynamic behavior. Derived from feedforward neural networks, RNNs can use their internal state (memory) to process variable length sequences of input. This makes them applicable to tasks such as unsegmented, connected handwriting recognition or speech recognition. 
 
 We can process a sequence of vectors x by applying a recurrence formula at every time step:
 
@@ -218,6 +235,8 @@ Several advanced models:
 * GRU by Cho et al. 2014
 
 ### Sequence Data
+Sequential pattern mining is a topic of data mining concerned with finding statistically relevant patterns between data examples where the values are delivered in a sequence. It is ususally presumed that the values are discrete, and thus time series mining is closely related, but ususally considered a different activity. 
+
 * We don't understand one word only
 * We understand based on the previous words + this word (time series)
 * NN/CNN cannot do this
@@ -242,6 +261,10 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/urs/local/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
+## Reference
 
-
-
+- Definition 
+* https://brilliant.org/wiki/backpropagation/#:~:text=Backpropagation%2C%20short%20for%20%22backward%20propagation,to%20the%20neural%20network's%20weights.
+* https://www.wikipedia.org/
+* https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
+* https://stats.stackexchange.com/questions/319323/whats-the-difference-between-variance-scaling-initializer-and-xavier-initialize
