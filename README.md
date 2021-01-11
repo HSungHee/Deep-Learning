@@ -28,6 +28,8 @@ Youtube Link : https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOj
 
 Slide Link : https://drive.google.com/drive/folders/0B41Zbb4c8HVyMHlSQlVFWWphNXc
 
+Code : https://github.com/HSungHee/DeepLearningZeroToAll
+
 ## 02. Linear Regression
 ### Hypothesis and Cost
 $H(x) = Wx + b$
